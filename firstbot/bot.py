@@ -10,12 +10,10 @@ logging.basicConfig(format='%(name)s - %(levelname)s - %(message)s',
                     )
 
 def greet_user(bot, update):
-	text = """Приветствую тебя, дорогой пользователь!
-
+	text = """Приветствую тебя, дорогой пользователь.
 Если бы я мог, я бы выполнил любую твою команду, но пока знаю только /start"""
 	print(text)
 	update.message.reply_text(text)
-
 
 def talk_to_me(bot, update):
     user_text = update.message.text 
@@ -24,7 +22,7 @@ def talk_to_me(bot, update):
 
 
 def main():
-	mybot = Updater('573293182:AAGj11JEaB5w1bunGGpa-tKNwBca3wdTL3A', request_kwargs=PROXY )
+	mybot = Updater('604612551:AAFkmf3nO1cwvXgQJIgiXSp0vRna_Bx7pm0', request_kwargs=PROXY )
 	mybot.dispatcher.add_handler(CommandHandler('start', greet_user))
 	mybot.dispatcher.add_handler(MessageHandler(Filters.text, talk_to_me))
 
